@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKd-KQ-HGG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TV Channels-->
+        <scene sceneID="NIB-58-RVu">
+            <objects>
+                <tableViewController id="syC-tv-ug9" customClass="TVChannelsTableViewController" customModule="TVChannels" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wqf-1A-qho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TVChannelCell" textLabel="f2e-Xo-DIc" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Ujw-Ig-SyK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ujw-Ig-SyK" id="A9z-AN-a7i">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f2e-Xo-DIc">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="syC-tv-ug9" id="zEV-i6-0Ws"/>
+                            <outlet property="delegate" destination="syC-tv-ug9" id="vm0-tX-C6m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TV Channels" id="i8w-xF-i4I"/>
+                    <connections>
+                        <segue destination="Mr7-qe-IWh" kind="show" identifier="ShowTVPrograms" id="HIH-4q-kOp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIa-pS-r1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="154.27286356821591"/>
+        </scene>
+        <!--TV Programs-->
+        <scene sceneID="Ixh-cm-hAO">
+            <objects>
+                <tableViewController id="Mr7-qe-IWh" customClass="TVProgramsTableViewController" customModule="TVChannels" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="360" sectionHeaderHeight="28" sectionFooterHeight="28" id="3hH-uu-cUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TVProgramCell" rowHeight="360" id="y5B-Ml-UDG" customClass="TVProgramTableViewCell" customModule="TVChannels" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="360"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5B-Ml-UDG" id="U2n-MQ-163">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="359.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucd-IY-KIe">
+                                            <rect key="frame" x="8" y="8" width="120" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="TnL-qN-sZH"/>
+                                                <constraint firstAttribute="height" constant="25" id="XkX-U6-pc7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-HQ-HTn">
+                                            <rect key="frame" x="158" y="8" width="209" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="0yN-Ia-NZo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-e5-Edo">
+                                            <rect key="frame" x="8" y="41" width="359" height="202"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gX5-e5-Edo" secondAttribute="height" multiplier="359:202" id="LLl-Fj-rNo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkV-OZ-BRJ">
+                                            <rect key="frame" x="8" y="251" width="359" height="100.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gX5-e5-Edo" firstAttribute="leading" secondItem="U2n-MQ-163" secondAttribute="leadingMargin" id="0EB-dp-Zs6"/>
+                                        <constraint firstItem="gX5-e5-Edo" firstAttribute="trailing" secondItem="U2n-MQ-163" secondAttribute="trailingMargin" id="0v5-UL-i6t"/>
+                                        <constraint firstItem="Ucd-IY-KIe" firstAttribute="leading" secondItem="U2n-MQ-163" secondAttribute="leadingMargin" id="3jE-Nk-xI1"/>
+                                        <constraint firstItem="XaY-HQ-HTn" firstAttribute="top" secondItem="U2n-MQ-163" secondAttribute="topMargin" id="4yV-Eo-bex"/>
+                                        <constraint firstItem="YkV-OZ-BRJ" firstAttribute="trailing" secondItem="U2n-MQ-163" secondAttribute="trailingMargin" id="7ev-da-Qhm"/>
+                                        <constraint firstAttribute="bottom" secondItem="YkV-OZ-BRJ" secondAttribute="bottom" constant="8" id="7fT-HG-gF8"/>
+                                        <constraint firstItem="YkV-OZ-BRJ" firstAttribute="top" secondItem="gX5-e5-Edo" secondAttribute="bottom" constant="8" id="BLp-0x-u9Y"/>
+                                        <constraint firstItem="Ucd-IY-KIe" firstAttribute="top" secondItem="U2n-MQ-163" secondAttribute="topMargin" id="K3G-ZQ-AkG"/>
+                                        <constraint firstItem="YkV-OZ-BRJ" firstAttribute="leading" secondItem="U2n-MQ-163" secondAttribute="leadingMargin" id="Nqn-wi-vs6"/>
+                                        <constraint firstItem="XaY-HQ-HTn" firstAttribute="leading" secondItem="Ucd-IY-KIe" secondAttribute="trailing" constant="30" id="mup-7B-aJB"/>
+                                        <constraint firstItem="gX5-e5-Edo" firstAttribute="top" secondItem="XaY-HQ-HTn" secondAttribute="bottom" constant="8" id="nrO-51-Jr7"/>
+                                        <constraint firstItem="XaY-HQ-HTn" firstAttribute="trailing" secondItem="U2n-MQ-163" secondAttribute="trailingMargin" id="uqG-HR-mRU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateTimeLabel" destination="XaY-HQ-HTn" id="bdk-IT-Jx2"/>
+                                    <outlet property="programImageView" destination="gX5-e5-Edo" id="TF7-L0-68Z"/>
+                                    <outlet property="synopsisLabel" destination="YkV-OZ-BRJ" id="yGH-ca-5LU"/>
+                                    <outlet property="titleLabel" destination="Ucd-IY-KIe" id="Zi3-zl-Tff"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mr7-qe-IWh" id="GIM-p9-Cts"/>
+                            <outlet property="delegate" destination="Mr7-qe-IWh" id="Jwm-bn-QYD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TV Programs" id="uV6-rY-MRf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBg-VT-pSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093.5999999999999" y="152.47376311844079"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lWr-KG-B6z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKd-KQ-HGG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hCa-Uw-GZw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="syC-tv-ug9" kind="relationship" relationship="rootViewController" id="NYB-Rm-woj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDm-y2-hHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="154.27286356821591"/>
+        </scene>
+    </scenes>
+</document>
